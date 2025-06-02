@@ -11,3 +11,8 @@ A simple automation tool that can parse and interpret shift scheduling data usin
 * csv_parser.py                 ---> Contains functions for loading and cleaning the CSV data
 * requirements.txt              ---> Python package dependencies
 * .env                          ---> For storing API key
+
+## How to run
+
+* To run via streamlit ---> streamlit run app.py
+* To run via CLI ---> python smart_agent.py 
