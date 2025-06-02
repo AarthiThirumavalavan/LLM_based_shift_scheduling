@@ -1,0 +1,129 @@
+[
+  {
+    "user_query": "What shifts are scheduled for Stock staff on 2025-04-01?",
+    "intent": "get_shifts_by_role_and_date",
+    "parameters": {
+      "role": "Stock",
+      "date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "Show me Charlie's schedule for 2025-04-01.",
+    "intent": "get_employee_schedule",
+    "parameters": {
+      "employee_name": "Charlie",
+      "date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "List all Security shifts.",
+    "intent": "get_shifts_by_role",
+    "parameters": {
+      "role": "Security"
+    }
+  },
+  {
+    "user_query": "Which shifts is Sue managing on 2025-04-01?",
+    "intent": "get_shifts_by_manager_and_date",
+    "parameters": {
+      "manager": "Sue",
+      "date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "Add a shift for Fiona on 2025-04-02 from 10:00 to 18:00, Morning shift, 8 hours at Store A.",
+    "intent": "add_shift",
+    "parameters": {
+      "employee_name": "Fiona",
+      "shift_date": "2025-04-02",
+      "start_time": "10:00",
+      "end_time": "18:00",
+      "shift_type": "Morning",
+      "hours": "8",
+      "location": "Store A"
+    }
+  },
+  {
+    "user_query": "Update Dana's shift on 2025-04-01 to start at 12:00 and end at 20:00.",
+    "intent": "update_shift",
+    "parameters": {
+      "employee_name": "Dana",
+      "date": "2025-04-01",
+      "start_time": "12:00",
+      "end_time": "20:00"
+    }
+  },
+  {
+    "user_query": "Who is working at Warehouse on 2025-04-01?",
+    "intent": "get_shifts_by_location",
+    "parameters": {
+      "location": "Warehouse",
+        "date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "Is Eli within the 48-hour limit for the week starting 2025-03-31?",
+    "intent": "check_max_hours",
+    "parameters": {
+      "employee_name": "Eli",
+      "week_start": "2025-03-31",
+      "max_hours": "48"
+    }
+  },
+  {
+    "user_query": "Remove Bob's shift on 2025-04-01.",
+    "intent": "remove_shift",
+    "parameters": {
+      "emp": "Bob",
+      "shift_date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "Swap shifts between Dana and Eli on 2025-04-01.",
+    "intent": "swap_shifts",
+    "parameters": {
+      "emp1": "Dana",
+      "emp2": "Eli",
+      "shift_date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "Reassign Charlie's shift on 2025-04-01 to Fiona.",
+    "intent": "reassign_shift",
+    "parameters": {
+      "from_emp": "Charlie",
+      "to_emp": "Fiona",
+      "shift_date": "2025-04-01"
+    }
+  },
+  {
+    "user_query": "Get Eli's weekly schedule.",
+    "intent": "get_schedule_this_week",
+    "parameters": {
+      "employee_name": "Eli"
+    }
+  },
+  {
+    "user_query": "How many hours did Fiona work during the week starting 2025-03-31?",
+    "intent": "get_total_hours_by_employee",
+    "parameters": {
+      "week_start_date": "2025-03-31"
+    }
+  },
+  {
+    "user_query": "Does Dana have any rest violations under 11 hours?",
+    "intent": "check_rest_period",
+    "parameters": {
+      "employee_name": "Dana",
+      "min_rest_hours": "11"
+    }
+  },
+  {
+    "user_query": "Get all shifts from 2025-04-01 to 2025-04-03.",
+    "intent": "get_shifts_by_date_range",
+    "parameters": {
+      "start_date": "2025-04-01",
+      "end_date": "2025-04-03"
+    }
+  }
+]

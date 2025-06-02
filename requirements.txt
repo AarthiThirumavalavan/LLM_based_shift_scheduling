@@ -1,0 +1,9 @@
+chromadb==1.0.12
+faiss==1.9.0
+groq==0.26.0
+langchain_groq==0.3.2
+numpy==2.2.6
+pandas==2.2.3
+python-dotenv==1.1.0
+sentence_transformers==4.1.0
+streamlit==1.45.1
