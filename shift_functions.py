@@ -51,8 +51,6 @@ def update_shift(df, employee_name, date, start_time, end_time, shift_type, hour
     # Update an existing shift for an employee on a given date.
     try:
         target_date_obj = pd.to_datetime(date).date()
-    except ValueError:
-        return f"Error: Invalid date format for date: '{date}'. Please use YYYY-MM-DD."
     except Exception as e: 
         return f"Error processing date '{date}': {e}"
 
@@ -84,7 +82,7 @@ def update_shift(df, employee_name, date, start_time, end_time, shift_type, hour
         except ValueError:
             return f"Error: Invalid format for end_time: '{end_time}'. Please use HH:MM."
     else:
-        prospective_end_time = current_end_time_val
+        new_end_time = current_end_time_val
 
     if new_start_time is not None and new_end_time is not None:
         if new_start_time >= new_end_time:
