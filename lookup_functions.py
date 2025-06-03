@@ -42,17 +42,17 @@ def get_total_hours_by_employee(df, week_start_date):
     week_end_obj = start_date_obj + timedelta(days=6)
     weekly_df = df[(df["Date"].dt.date >= start_date_obj) & (df["Date"].dt.date <= week_end_obj)]
     if weekly_df.empty:
-        return pd.DataFrame(columns=["Employee Name", "Hours"]) # Return empty DataFrame with expected columns
+        return pd.DataFrame(columns=["Employee Name", "Hours"]) 
     return weekly_df.groupby("Employee Name")["Hours"].sum().reset_index()
 
 def check_max_hours(df , employee_name, week_start, max_hours=48):
     # Check if employee is within max working hours for a week.
     try:
         week_start_obj = pd.to_datetime(week_start).date()
-        max_hours_float = float(max_hours) # Ensure max_hours is numeric
+        max_hours_float = float(max_hours) 
     except ValueError:
         return f"Error: Invalid format for week_start date ('{week_start}') or max_hours ('{max_hours}'). Please use YYYY-MM-DD for dates."
-    except Exception as e: # Catch any other parsing errors
+    except Exception as e:
         return f"Error processing parameters: {e}"
 
     week_end_obj = week_start_obj + timedelta(days=6)
@@ -68,7 +68,7 @@ def check_max_hours(df , employee_name, week_start, max_hours=48):
 def check_rest_period(df, employee_name, min_rest_hours):
     # Check if employee has sufficient rest period between shifts.
     try:
-        min_rest_hours_float = float(min_rest_hours) # Ensure min_rest_hours is numeric
+        min_rest_hours_float = float(min_rest_hours) 
     except ValueError:
         return "Error: Invalid format for min_rest_hours. Must be a number."
     except Exception as e:
@@ -88,7 +88,6 @@ def check_rest_period(df, employee_name, min_rest_hours):
         violations_df = pd.DataFrame(violations, columns=["Previous Shift Date", "Current Shift Date"])
         return violations_df
     else:
-        # Return an empty DataFrame with expected columns if no violations
         return pd.DataFrame(columns=["Previous Shift Date", "Current Shift Date"])
 
 
