@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 def load_agent():
-    csv_file_path = "/Users/aarthithirumavalavan/Desktop/Job_related_UK//resource/shift_schedule.csv" 
+    csv_file_path = "./resource/shift_schedule.csv" 
     examples_json_path = "examples.json" 
     try:
         agent = VectorScheduleAgent(csv_file_path, examples_json_path)
