@@ -12,6 +12,11 @@ A simple automation tool that can parse and interpret shift scheduling data usin
 * requirements.txt              ---> Python package dependencies
 * .env                          ---> For storing API key
 
+## Architecture
+
+<img width="704" height="404" alt="image" src="https://github.com/user-attachments/assets/186230da-136f-480f-8528-381c6a499c54" />
+
+
 ## How to run
 
 * To run via streamlit ---> streamlit run app.py
